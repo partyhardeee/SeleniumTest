@@ -10,7 +10,7 @@ public class SeleniumTest {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 
     }
-
+    //тест
     @Test
     public void openBrowserTest() throws InterruptedException {
         driver = new ChromeDriver();
