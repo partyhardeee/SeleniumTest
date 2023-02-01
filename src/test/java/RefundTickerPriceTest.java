@@ -1,5 +1,5 @@
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class RefundTickerPriceTest {
     RefundCalculation refundCalculation = new RefundCalculation();
@@ -16,7 +16,7 @@ public class RefundTickerPriceTest {
         hoursBeforeConcert = 0;
         refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
         exprectedValue = 100;
-        Assert.assertEquals(exprectedValue, refund);
+        Assertions.assertEquals(exprectedValue, refund);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class RefundTickerPriceTest {
         hoursBeforeConcert = 0;
         refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
         exprectedValue = 100;
-        Assert.assertEquals(exprectedValue, refund);
+        Assertions.assertEquals(exprectedValue, refund);
     }
 
     @Test
@@ -36,7 +36,7 @@ public class RefundTickerPriceTest {
         hoursBeforeConcert = 241;
         refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
         exprectedValue = 100;
-        Assert.assertEquals(exprectedValue, refund);
+        Assertions.assertEquals(exprectedValue, refund);
     }
 
     @Test
@@ -46,7 +46,7 @@ public class RefundTickerPriceTest {
         hoursBeforeConcert = 240;
         refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
         exprectedValue = 100;
-        Assert.assertEquals(exprectedValue, refund);
+        Assertions.assertEquals(exprectedValue, refund);
     }
 
     @Test
@@ -56,7 +56,7 @@ public class RefundTickerPriceTest {
         hoursBeforeConcert = 144;
         refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
         exprectedValue = 50;
-        Assert.assertEquals(exprectedValue, refund);
+        Assertions.assertEquals(exprectedValue, refund);
     }
 
     @Test
@@ -66,7 +66,7 @@ public class RefundTickerPriceTest {
         hoursBeforeConcert = 4;
         refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
         exprectedValue = 30;
-        Assert.assertEquals(exprectedValue, refund);
+        Assertions.assertEquals(exprectedValue, refund);
     }
 
     @Test
@@ -76,7 +76,7 @@ public class RefundTickerPriceTest {
         hoursBeforeConcert = 3;
         refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
         exprectedValue = 0;
-        Assert.assertEquals(exprectedValue, refund);
+        Assertions.assertEquals(exprectedValue, refund);
     }
 
     @Test
@@ -86,7 +86,7 @@ public class RefundTickerPriceTest {
         hoursBeforeConcert = null;
         refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
         exprectedValue = 0;
-        Assert.assertEquals(exprectedValue, refund);
+        Assertions.assertEquals(exprectedValue, refund);
     }
 
     @Test
@@ -96,7 +96,7 @@ public class RefundTickerPriceTest {
         hoursBeforeConcert = -1;
         refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
         exprectedValue = 0;
-        Assert.assertEquals(exprectedValue, refund);
+        Assertions.assertEquals(exprectedValue, refund);
     }
 
 
