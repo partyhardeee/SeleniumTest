@@ -1,18 +1,21 @@
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 public class SeleniumTest {
     public static WebDriver driver;
 
-    @BeforeClass
-    public static void setup(){
+    @BeforeAll
+    public static void setup() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 
     }
+
+
     //тест
     @Test
-    public void openBrowserTest() throws InterruptedException {
+    public void openBrowserTest() {
         driver = new ChromeDriver();
         driver.quit();
     }
