@@ -23,6 +23,7 @@ public class MailTest {
     public void openPopup() {
         driver.findElement(By.xpath("//button[contains(@class,'resplash-btn resplash-btn_primary')]")).click();
         driver.switchTo().frame(14);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@name='username']")));
     }
 
 
@@ -69,6 +70,8 @@ public class MailTest {
         //Ввод в поле Mail существущей почты
         driver.findElement(By.xpath("//input[@name='username']")).sendKeys("qwerty", Keys.ENTER);
         //Ввод в поле пароль неверное значение
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@class='input-0-2-71 withIcon-0-2-72']")));
+        driver.findElement(By.xpath("//input[@class='input-0-2-71 withIcon-0-2-72']")).click();
         driver.findElement(By.xpath("//input[@class='input-0-2-71 withIcon-0-2-72']")).sendKeys(Keys.ENTER);
         Assertions.assertTrue(driver.findElement(By.xpath("//div[@data-text='Поле «Пароль» должно быть заполнено']")).isDisplayed());
     }

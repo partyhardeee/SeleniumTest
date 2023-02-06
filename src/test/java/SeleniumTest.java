@@ -9,11 +9,9 @@ public class SeleniumTest {
     @BeforeAll
     public static void setup() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        //123
     }
 
 
-    //тест
     @Test
     public void openBrowserTest() {
         driver = new ChromeDriver();
