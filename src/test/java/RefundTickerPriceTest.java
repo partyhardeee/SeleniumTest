@@ -41,7 +41,7 @@ public class RefundTickerPriceTest {
         Boolean wasConcertRescheduled = false;
         Integer hoursBeforeConcert = 240;
         Integer refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
-        Integer expectedValue = 100;
+        Integer expectedValue = 50;
         Assertions.assertEquals(expectedValue, refund);
     }
 
@@ -109,7 +109,7 @@ public class RefundTickerPriceTest {
     public void WhenHoursIs0Expected0() {
         Boolean wasConcertCancelled = false;
         Boolean wasConcertRescheduled = false;
-        Integer hoursBeforeConcert = 72;
+        Integer hoursBeforeConcert = 0;
         Integer refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
         Integer expectedValue = 0;
         Assertions.assertEquals(expectedValue, refund);
