@@ -9,7 +9,7 @@ public class SeleniumTest {
     @BeforeAll
     public static void setup() {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        //test
+        //123
     }
 
 
