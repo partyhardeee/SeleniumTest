@@ -3,100 +3,136 @@ import org.junit.jupiter.api.Test;
 
 public class RefundTickerPriceTest {
     RefundCalculation refundCalculation = new RefundCalculation();
-    Boolean wasConcertCancelled;
-    Boolean wasConcertRescheduled;
-    Integer hoursBeforeConcert;
-    Integer exprectedValue;
-    Integer refund;
+
 
     @Test
-    public void WhenConcertIsCanselledExpected100() {
-        wasConcertCancelled = true;
-        wasConcertRescheduled = false;
-        hoursBeforeConcert = 0;
-        refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
-        exprectedValue = 100;
-        Assertions.assertEquals(exprectedValue, refund);
+    public void WhenConcertIsCancelledExpected100() {
+        Boolean wasConcertCancelled = true;
+        Boolean wasConcertRescheduled = false;
+        Integer hoursBeforeConcert = 0;
+        Integer refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
+        Integer expectedValue = 100;
+        Assertions.assertEquals(expectedValue, refund);
     }
 
     @Test
     public void WhenConcertIsRescheduledExpected100() {
-        wasConcertCancelled = false;
-        wasConcertRescheduled = true;
-        hoursBeforeConcert = 0;
-        refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
-        exprectedValue = 100;
-        Assertions.assertEquals(exprectedValue, refund);
+        Boolean wasConcertCancelled = false;
+        Boolean wasConcertRescheduled = true;
+        Integer hoursBeforeConcert = 0;
+        Integer refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
+        Integer expectedValue = 100;
+        Assertions.assertEquals(expectedValue, refund);
     }
 
     @Test
     public void WhenHoursOver240Expected100() {
-        wasConcertCancelled = false;
-        wasConcertRescheduled = false;
-        hoursBeforeConcert = 241;
-        refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
-        exprectedValue = 100;
-        Assertions.assertEquals(exprectedValue, refund);
+        Boolean wasConcertCancelled = false;
+        Boolean wasConcertRescheduled = false;
+        Integer hoursBeforeConcert = 241;
+        Integer refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
+        Integer expectedValue = 100;
+        Assertions.assertEquals(expectedValue, refund);
     }
 
     @Test
     public void WhenHoursIs240Expected50() {
-        wasConcertCancelled = false;
-        wasConcertRescheduled = false;
-        hoursBeforeConcert = 240;
-        refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
-        exprectedValue = 100;
-        Assertions.assertEquals(exprectedValue, refund);
+        Boolean wasConcertCancelled = false;
+        Boolean wasConcertRescheduled = false;
+        Integer hoursBeforeConcert = 240;
+        Integer refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
+        Integer expectedValue = 100;
+        Assertions.assertEquals(expectedValue, refund);
     }
 
     @Test
-    public void WhenHoursIs144Expected50() {
-        wasConcertCancelled = false;
-        wasConcertRescheduled = false;
-        hoursBeforeConcert = 144;
-        refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
-        exprectedValue = 50;
-        Assertions.assertEquals(exprectedValue, refund);
+    public void WhenHoursIs121Expected50() {
+        Boolean wasConcertCancelled = false;
+        Boolean wasConcertRescheduled = false;
+        Integer hoursBeforeConcert = 121;
+        Integer refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
+        Integer expectedValue = 50;
+        Assertions.assertEquals(expectedValue, refund);
     }
 
     @Test
-    public void WhenHoursIs4Expected30() {
-        wasConcertCancelled = false;
-        wasConcertRescheduled = false;
-        hoursBeforeConcert = 4;
-        refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
-        exprectedValue = 30;
-        Assertions.assertEquals(exprectedValue, refund);
+    public void WhenHoursIs120Expected30() {
+        Boolean wasConcertCancelled = false;
+        Boolean wasConcertRescheduled = false;
+        Integer hoursBeforeConcert = 120;
+        Integer refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
+        Integer expectedValue = 30;
+        Assertions.assertEquals(expectedValue, refund);
     }
 
     @Test
-    public void WhenHoursIs3Expected0() {
-        wasConcertCancelled = false;
-        wasConcertRescheduled = false;
-        hoursBeforeConcert = 3;
-        refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
-        exprectedValue = 0;
-        Assertions.assertEquals(exprectedValue, refund);
+    public void WhenHoursIs119Expected30() {
+        Boolean wasConcertCancelled = false;
+        Boolean wasConcertRescheduled = false;
+        Integer hoursBeforeConcert = 119;
+        Integer refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
+        Integer expectedValue = 30;
+        Assertions.assertEquals(expectedValue, refund);
+    }
+
+    @Test
+    public void WhenHoursIs73Expected30() {
+        Boolean wasConcertCancelled = false;
+        Boolean wasConcertRescheduled = false;
+        Integer hoursBeforeConcert = 73;
+        Integer refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
+        Integer expectedValue = 30;
+        Assertions.assertEquals(expectedValue, refund);
+    }
+
+    @Test
+    public void WhenHoursIs72Expected0() {
+        Boolean wasConcertCancelled = false;
+        Boolean wasConcertRescheduled = false;
+        Integer hoursBeforeConcert = 72;
+        Integer refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
+        Integer expectedValue = 0;
+        Assertions.assertEquals(expectedValue, refund);
+    }
+
+    @Test
+    public void WhenHoursIs71Expected0() {
+        Boolean wasConcertCancelled = false;
+        Boolean wasConcertRescheduled = false;
+        Integer hoursBeforeConcert = 71;
+        Integer refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
+        Integer expectedValue = 0;
+        Assertions.assertEquals(expectedValue, refund);
+    }
+
+    @Test
+    public void WhenHoursIs0Expected0() {
+        Boolean wasConcertCancelled = false;
+        Boolean wasConcertRescheduled = false;
+        Integer hoursBeforeConcert = 72;
+        Integer refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
+        Integer expectedValue = 0;
+        Assertions.assertEquals(expectedValue, refund);
     }
 
     @Test
     public void WhenHoursIsNull() {
-        wasConcertCancelled = false;
-        wasConcertRescheduled = false;
-        hoursBeforeConcert = null;
-        refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
-        exprectedValue = 0;
-        Assertions.assertEquals(exprectedValue, refund);
+        Boolean wasConcertCancelled = false;
+        Boolean wasConcertRescheduled = false;
+        Integer hoursBeforeConcert = null;
+        Integer refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
+        Integer expectedValue = 0;
+        Assertions.assertEquals(expectedValue, refund);
     }
 
     @Test
     public void WhenHoursIsMinus() {
-        wasConcertCancelled = false;
-        wasConcertRescheduled = false;
-        hoursBeforeConcert = -1;
-        refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
-        exprectedValue = 0;
-        Assertions.assertEquals(exprectedValue, refund);
+        Boolean wasConcertCancelled = false;
+        Boolean wasConcertRescheduled = false;
+        Integer hoursBeforeConcert = -1;
+        Integer refund = refundCalculation.getRefundTicketPricePercent(hoursBeforeConcert, wasConcertCancelled, wasConcertRescheduled);
+        Integer expectedValue = 0;
+        Assertions.assertEquals(expectedValue, refund);
     }
 
 
