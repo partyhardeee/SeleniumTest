@@ -6,7 +6,7 @@ public class RefundTickerPriceTest {
 
 
     @Test
-    public void WhenConcertIsCancelledExpected100() {
+    public void whenConcertIsCancelledExpected100() {
         Boolean wasConcertCancelled = true;
         Boolean wasConcertRescheduled = false;
         Integer hoursBeforeConcert = 0;
@@ -16,7 +16,7 @@ public class RefundTickerPriceTest {
     }
 
     @Test
-    public void WhenConcertIsRescheduledExpected100() {
+    public void whenConcertIsRescheduledExpected100() {
         Boolean wasConcertCancelled = false;
         Boolean wasConcertRescheduled = true;
         Integer hoursBeforeConcert = 0;
@@ -26,7 +26,7 @@ public class RefundTickerPriceTest {
     }
 
     @Test
-    public void WhenHoursOver240Expected100() {
+    public void whenHoursOver240Expected100() {
         Boolean wasConcertCancelled = false;
         Boolean wasConcertRescheduled = false;
         Integer hoursBeforeConcert = 241;
@@ -36,7 +36,7 @@ public class RefundTickerPriceTest {
     }
 
     @Test
-    public void WhenHoursIs240Expected50() {
+    public void whenHoursIs240Expected50() {
         Boolean wasConcertCancelled = false;
         Boolean wasConcertRescheduled = false;
         Integer hoursBeforeConcert = 240;
@@ -46,7 +46,7 @@ public class RefundTickerPriceTest {
     }
 
     @Test
-    public void WhenHoursIs121Expected50() {
+    public void whenHoursIs121Expected50() {
         Boolean wasConcertCancelled = false;
         Boolean wasConcertRescheduled = false;
         Integer hoursBeforeConcert = 121;
@@ -56,7 +56,7 @@ public class RefundTickerPriceTest {
     }
 
     @Test
-    public void WhenHoursIs120Expected30() {
+    public void whenHoursIs120Expected30() {
         Boolean wasConcertCancelled = false;
         Boolean wasConcertRescheduled = false;
         Integer hoursBeforeConcert = 120;
@@ -66,7 +66,7 @@ public class RefundTickerPriceTest {
     }
 
     @Test
-    public void WhenHoursIs119Expected30() {
+    public void whenHoursIs119Expected30() {
         Boolean wasConcertCancelled = false;
         Boolean wasConcertRescheduled = false;
         Integer hoursBeforeConcert = 119;
@@ -76,7 +76,7 @@ public class RefundTickerPriceTest {
     }
 
     @Test
-    public void WhenHoursIs73Expected30() {
+    public void whenHoursIs73Expected30() {
         Boolean wasConcertCancelled = false;
         Boolean wasConcertRescheduled = false;
         Integer hoursBeforeConcert = 73;
@@ -86,7 +86,7 @@ public class RefundTickerPriceTest {
     }
 
     @Test
-    public void WhenHoursIs72Expected0() {
+    public void whenHoursIs72Expected0() {
         Boolean wasConcertCancelled = false;
         Boolean wasConcertRescheduled = false;
         Integer hoursBeforeConcert = 72;
@@ -96,7 +96,7 @@ public class RefundTickerPriceTest {
     }
 
     @Test
-    public void WhenHoursIs71Expected0() {
+    public void whenHoursIs71Expected0() {
         Boolean wasConcertCancelled = false;
         Boolean wasConcertRescheduled = false;
         Integer hoursBeforeConcert = 71;
@@ -106,7 +106,7 @@ public class RefundTickerPriceTest {
     }
 
     @Test
-    public void WhenHoursIs0Expected0() {
+    public void whenHoursIs0Expected0() {
         Boolean wasConcertCancelled = false;
         Boolean wasConcertRescheduled = false;
         Integer hoursBeforeConcert = 0;
@@ -116,7 +116,7 @@ public class RefundTickerPriceTest {
     }
 
     @Test
-    public void WhenHoursIsNull() {
+    public void whenHoursIsNull() {
         Boolean wasConcertCancelled = false;
         Boolean wasConcertRescheduled = false;
         Integer hoursBeforeConcert = null;
@@ -126,7 +126,7 @@ public class RefundTickerPriceTest {
     }
 
     @Test
-    public void WhenHoursIsMinus() {
+    public void whenHoursIsMinus() {
         Boolean wasConcertCancelled = false;
         Boolean wasConcertRescheduled = false;
         Integer hoursBeforeConcert = -1;
